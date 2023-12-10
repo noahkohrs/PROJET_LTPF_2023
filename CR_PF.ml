@@ -1341,16 +1341,27 @@ myLangToAST
   "
 a:=1;
 if (a==true) 
-then {b:=1} 
-else {b:=false};
+then {bbb:=1} 
+else {bbb:=false};
 
 while (true) {}
 ";;
 
+myLangToAST 
+  "
+while (true) {
+  while (true) {
+    while (true) {
+      testingSmthg := true
+    }
+  }
+}
+";;
+
 myLangToAST
   "
-bb := 1;
-ac := 1;
+bouteille := 1;
+harry := 1;
 if (harry && bouteille == true) 
   then {bouteille := 1} 
   else{bouteille := false}

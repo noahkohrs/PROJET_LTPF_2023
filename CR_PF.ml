@@ -545,8 +545,7 @@ let rec evalBooleanExpression : (state -> bexp -> bool) = fun s exp ->
   | Not (exp)         -> not (evalBooleanExpression s exp)
 ;;
 
-let evalAssign : (state -> avar -> bexp -> state) = fun s left right -> update s left (evalBooleanExpression s right)
-;;
+let evalAssign : (state -> avar -> bexp -> state) = fun s left right -> update s left (evalBooleanExpression s right) ;;
 
 let rec evalProgram : (state -> winstr -> state) = fun s instr ->
   match instr with 
@@ -1360,10 +1359,10 @@ while (true) {
 
 myLangToAST
   "
-bouteille := 1;
+tom := 1;
 harry := 1;
-if (harry && bouteille == true) 
-  then {bouteille := 1} 
+if (harry && tom == true) 
+  then {tom := 1} 
   else{bouteille := false}
 "
 ;;

@@ -197,6 +197,7 @@ let star_pipe_L2R (a : ('r -> 'r, 'term) ranalist) : ('r -> 'r, 'term) ranalist 
 let star_L2R (r0 : 'r) (a : ('r -> 'r, 'term) ranalist) : ('r, 'term) ranalist =
   star_pipe_L2R a ++> fun f -> epsilon_res (r0 |> f)
 ;;
+
 (*
 A partir d'ici, nous ajoutons nous même quelques outils qui seront utiles pour la suite.
 *)

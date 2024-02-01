@@ -1,8 +1,11 @@
 # LTPF Project 
 
-## Lexical Analysis and Parsing
 
-This project consists of a simple implementation of lexical analysis and parsing for a programming language implemented in OCaml. The code provided includes functions for lexing and parsing expressions in the language.
+
+
+## PF - Lexical Analysis and Parsing
+
+This project (`CR_PF.ml`) consists of a simple implementation of lexical analysis and parsing for a programming language implemented in OCaml. The code provided includes functions for lexing and parsing expressions in the language.
 
 ### Lexical Analysis
 
@@ -39,6 +42,12 @@ myLangToAST "if(valid == true) then !valid else valid ";
 ```
 
 This example demonstrates how to use the lexer and parser to generate the AST for a given input string.
+
+
+## LT - Proof of program properties
+
+This project (`CR_LT.v`) a Coq implementation of a small imperative language and its operational semantics. The language includes arithmetic and boolean expressions, along with constructs for sequencing, conditionals, and while loops. This part serves as a proof of program for the language implemented in OCaml.
+
 
 ## Warning
 
